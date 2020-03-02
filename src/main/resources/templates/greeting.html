@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <title>Greeting</title>
+    <style>
+        #welcome_text {
+            align-content: center;
+            text-align: center;
+            margin-top: 15px;
+            align-self: center;
+            text-underline: black;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+<h1 id="welcome_text">Welcome to the Registration Page</h1>
+
+<h3>Register here</h3>
+
+<form action="#" method="post" th:action="@{/greeting}" th:object="${customer}">
+    <p>Name: <input th:field="*{name}" type="text"/></p>
+    <p>Email: <input th:field="*{email}" type="text"/></p>
+    <p>Age: <input th:field="*{age}" type="text"/></p>
+    <p>City: <input th:field="*{city}" type="text"/></p>
+    <p><input type="submit" value="Submit"/>
+</form>
+</body>
+</html>
